@@ -1,0 +1,12 @@
+<h3> {{ menu.name }} </h3>
+<p> {{ menu.text }} </p>
+<h4>---------------------------------------</h4>
+{% with subs=menu.menu_set.all%}
+    {% for sub in subs%}
+        <div class='submenu'>
+            <a> {{ sub.name }} </a> <br>
+            <p> {{ sub.text }} </p> <br>
+        </div>
+    {% endfor %}
+{% endwith %}
+<hr>

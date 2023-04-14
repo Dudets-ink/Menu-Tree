@@ -1,0 +1,19 @@
+{% extends 'menu/base.html' %}
+
+{% block title %}
+    Main page
+{% endblock title %}
+
+{% block loads %}
+    {% load tags %}
+{% endblock loads %}
+
+{% block content %}
+    <div class='menus'>
+        {% for menu in object_list %}
+            <div class='menu'>
+                {% draw_index_menu menu %}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock content %}

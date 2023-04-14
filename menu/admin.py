@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Menu, Submenu
+from .models import Menu
 
 
 # Register your models here.
@@ -13,4 +13,3 @@ admin.site.register(Menu)
 #     def submenus(self, obj):
 #         return 
     
-admin.site.register(Submenu)
