@@ -1,7 +1,7 @@
 {% extends 'menu/base.html' %}
 
 {% block title %}
-    Main page
+    {{ name }}
 {% endblock title %}
 
 {% block loads %}
@@ -11,6 +11,12 @@
 {% block content %}
     <div class='menus'>
         {% for menu in menu_list %}
+            <div class='menu'>
+                {% draw_menu menu %}
+            </div>
+        {% endfor %}
+
+        {% for menu in other_menus %}
             <div class='menu'>
                 {% draw_index_menu menu %}
             </div>

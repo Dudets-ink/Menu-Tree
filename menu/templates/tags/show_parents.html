@@ -1,0 +1,12 @@
+{% if menu %}
+    {% load tags %}
+    {% show_parents menu %}
+
+    {% if menu.parent %}
+        <a href={% url 'tree' menu.name %}>{{ menu.name}} </a>
+    {% else %}
+        <a href={% url 'index'%}>{{ menu.name}} </a>
+    {% endif %}
+    <p> {{ menu.text }} </p>
+    <h4>-----------------------</h4>
+{% endif %}

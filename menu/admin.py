@@ -5,11 +5,4 @@ from .models import Menu
 
 # Register your models here.
 admin.site.register(Menu)
-# class MenuAdmin(admin.ModelAdmin):
-#     model = Menu
-#     list_display = ['name', submenus]
-    
-#     @admin.display(description='All related to this menu submenus')
-#     def submenus(self, obj):
-#         return 
     
