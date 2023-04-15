@@ -1,11 +1,12 @@
-<h3> {{ menu.name }} </h3>
+<h3>{{ menu.name }} </h3>
 <p> {{ menu.text }} </p>
 <h4>---------------------------------------</h4>
 {% with subs=menu.menu_set.all%}
     {% for sub in subs%}
         <div class='submenu'>
             <a href={% url 'tree' sub.name %}> {{ sub.name }} </a> <br>
-            <p> {{ sub.text }} </p> <br>
+            <p> {{ sub.text }} </p>
+            <h4>---------------------------------------</h4>
         </div>
     {% endfor %}
 {% endwith %}

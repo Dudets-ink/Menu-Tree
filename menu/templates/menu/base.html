@@ -7,8 +7,9 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {% block css %}{% endblock css %}
+        {% load static %}
         {% block loads %}{% endblock loads %}
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="{% static 'menu/css/menu.css'%}">
     </head>
     <body>
         <nav>

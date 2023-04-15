@@ -9,7 +9,8 @@
     {% for sub in subs%}
         <div class='submenu'>
             <a href={% url 'tree' sub.name %}> {{ sub.name }} </a> <br>
-            <p> {{ sub.text }} </p> <br>
+            <p> {{ sub.text }} </p> 
+            <h4>---------------------------------------</h4>
         </div>
     {% endfor %}
 {% endwith %}
